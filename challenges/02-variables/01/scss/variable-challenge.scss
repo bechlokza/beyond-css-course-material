@@ -1,3 +1,7 @@
+$clr-primary: #f8f7f7;
+$clr-secondary: #201e1f;
+$clr-tertiary: #da3f0b;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,15 +23,39 @@ body {
   gap: 0.75em;
   width: min(90%, 60rem);
   padding: 2em;
+  background-color: $clr-primary;
+  box-shadow: 2px 10px 38px 3px $clr-secondary;
+
+  &__title {
+    color: $clr-tertiary;
+  }
 }
 
 .btn {
   display: inline-block;
   padding: 0.5em 1.5em;
   text-decoration: none;
+  border-radius: .5rem;
+
+  &:hover, &:focus {
+    background-color: $clr-secondary;
+    color: $clr-primary;
+    box-shadow: 0 3px 20px -3px $clr-tertiary;
+  }
+
+  &--primary {
+    background-color: $clr-tertiary;
+    color: $clr-primary;
+  }
+
+  &--outline {
+    background-color: none;
+    color: $clr-tertiary;
+    border: 1px solid $clr-tertiary;
+  }
 }
 
 .flex-group {
   display: flex;
-  gap: 1rem;
+  gap: 1rem; 
 }
