@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  color: #1f3049;
+  background-color: #fff;
+  text-align: center;
+}
+
+.container {
+  width: min(100% - 2rem, 60rem);
+  margin-inline: auto;
+}
+
+.page-title {
+  color: #0066ff;
+  font-size: 3.75rem;
+  margin-block: 2rem;
+}
+
+.pricing-plans {
+  border: 0.5rem solid #0066ff;
+  display: flex;
+}
+
+.tier {
+  flex: 1;
+  padding: 2.25rem;
+  display: grid;
+  gap: 1.25rem;
+}
+.tier__title {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #0066ff;
+}
+.tier__feature-list {
+  list-style: none;
+}
+.tier__list-item:not(:last-child)::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-block: 1.25rem;
+  background-color: #1f3049;
+  opacity: 0.2;
+}
+.tier__price {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.tier__price span {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.button {
+  cursor: pointer;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  background-color: #0066ff;
+  padding: 1em 1.5em;
+  justify-self: center;
+}
+
+/*# sourceMappingURL=style.css.map */
