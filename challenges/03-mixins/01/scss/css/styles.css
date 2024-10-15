@@ -1,0 +1,14 @@
+body {
+  font-family: system-ui;
+  margin: 0;
+  color: red;
+}
+
+.section-one,
+.section-two,
+.section-three {
+  text-align: center;
+  padding: 10vh 0;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -9,3 +9,63 @@ body {
   text-align: center;
   padding: 10vh 0;
 }
+
+@mixin linearGradient($color1: 45deg, $color2, $direction) {
+  background-image: linear-gradient($direction, $color1 0%, $color2 100%);
+}
+
+@mixin underline($width, $height, $backgroundclr, $margin) {
+  position: relative;
+  width: $width;
+  &:before {
+    content: '';
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: $backgroundclr;
+    top: $margin;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@mixin ui-element($size, $color, $bg-color, $hover-color: white, $hover-bg-color: black) {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  padding: $size calc($size * 3);
+  color: $color;
+  background-color: $bg-color;
+   &:hover {
+    color: $hover-color;
+    background-color: $hover-bg-color;
+   }
+}
+
+.section-one {
+  @include linearGradient(#f00, #00f, 45deg);
+}
+.section-two {
+  @include linearGradient(rgb(255, 196, 0), rgb(64, 191, 166), 270deg);
+}
+.section-three {
+  @include linearGradient(rgb(0, 157, 255), rgb(17, 64, 82), 170deg);
+}
+
+.title {
+  @include underline(100%, 2px, #ccc, 1.5em);
+}
+
+.button-one {
+  @include ui-element(1em, #fff, green, #333, #fff);
+}
+.button-two {
+  @include ui-element(1em, #fff,purple, #333, #fff);
+}
+.badge-one {
+  @include ui-element(1em, #fff, red);
+}
+.badge-two {
+  @include ui-element(1em, #fff, orange);
+}

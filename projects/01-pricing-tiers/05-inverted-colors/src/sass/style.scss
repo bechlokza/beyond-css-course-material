@@ -71,10 +71,20 @@ body {
   display: grid;
   gap: $size-20;
 
+  &.inverted {
+    background: $color-primary-400;
+    color: $color-neutral-100;
+  }
+
   &__title {
     text-transform: uppercase;
     font-weight: $fw-700;
     color: $color-primary-400;
+    
+    .inverted & {
+      color: $color-neutral-100;
+    }
+    
   }
 
   &__feature-list {
@@ -111,6 +121,10 @@ body {
   color: $color-neutral-100;
   background-color: $color-primary-400;
   padding: 1em 1.5em;
-
   justify-self: center;
+
+   .inverted & {
+    background: $color-neutral-100;
+    color: $color-primary-400;
+  }
 }

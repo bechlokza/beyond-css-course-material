@@ -1,0 +1,96 @@
+body {
+  font-family: system-ui;
+  margin: 0;
+}
+
+.section-one,
+.section-two,
+.section-three {
+  text-align: center;
+  padding: 10vh 0;
+}
+
+.section-one {
+  background-image: linear-gradient(45deg, #f00 0%, #00f 100%);
+}
+
+.section-two {
+  background-image: linear-gradient(270deg, rgb(255, 196, 0) 0%, rgb(64, 191, 166) 100%);
+}
+
+.section-three {
+  background-image: linear-gradient(170deg, rgb(0, 157, 255) 0%, rgb(17, 64, 82) 100%);
+}
+
+.title {
+  position: relative;
+  width: 100%;
+}
+.title:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  top: 1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button-one {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  padding: 1em 3em;
+  color: #fff;
+  background-color: green;
+}
+.button-one:hover {
+  color: #333;
+  background-color: #fff;
+}
+
+.button-two {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  padding: 1em 3em;
+  color: #fff;
+  background-color: purple;
+}
+.button-two:hover {
+  color: #333;
+  background-color: #fff;
+}
+
+.badge-one {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  padding: 1em 3em;
+  color: #fff;
+  background-color: red;
+}
+.badge-one:hover {
+  color: white;
+  background-color: black;
+}
+
+.badge-two {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  padding: 1em 3em;
+  color: #fff;
+  background-color: orange;
+}
+.badge-two:hover {
+  color: white;
+  background-color: black;
+}
+
+/*# sourceMappingURL=styles.css.map */

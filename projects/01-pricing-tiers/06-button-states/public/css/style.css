@@ -24,6 +24,11 @@ body {
   margin-inline: auto;
 }
 
+.inverted {
+  background: #0066ff;
+  color: #fff;
+}
+
 .page-title {
   color: #0066ff;
   font-size: 3.75rem;
@@ -40,10 +45,6 @@ body {
   padding: 2.25rem;
   display: grid;
   gap: 1.25rem;
-}
-.tier.inverted {
-  background: #0066ff;
-  color: #fff;
 }
 .tier__title {
   text-transform: uppercase;
@@ -84,8 +85,12 @@ body {
   justify-self: center;
 }
 .inverted .button {
-  background: #fff;
   color: #0066ff;
+  background-color: #fff;
+}
+.button:hover, .button:focus {
+  background-color: rgba(31, 48, 73, 0.7);
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
