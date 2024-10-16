@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+// mixins
+
+// vars
+$fs-400: 1.125rem;
+$fs-500: 1.25rem;
+$fs-600: 2rem;
+$fs-700: 3rem;
+
+$fw-Regular: 400;
+$fw-Bold: 700;
+$fw-Black: 900;
+
+$size-8: .5rem;
+$size-16: 1rem;
+$size-32: 2rem;
+$size-36: 3rem;
+
+$red-400: hsla(357, 100%, 68%, 1);
+$red-500: hsl(357, 74%, 40%);
+$blue-800: hsla(216, 71%, 16%, 1);
+$neutral-100: hsl(0 0% 100%);
+
+$font-family: 'Roboto', sans-serif;
+
+%shadow { 
+    box-shadow: .25rem .25rem 1rem rgb(0 0 0 / .15);
+}
+
+// reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+
+@mixin interactive-scale($color, $bg, $scale: 1.05) {
+    transform: scale(1);
+    transition: transform 350ms ease;
+  
+    &:hover,
+    &:focus {
+      transform: scale($scale);
+      color: $color;
+      background-color: $bg;
+    }
+}
+
+
+// Base
+body {
+    font-family: $font-family;
+    font-size: $fs-400;
+    color: $blue-800;
+
+    // for demo
+    margin: $size-36 0;
+}
+
+
+
